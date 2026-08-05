@@ -1,6 +1,7 @@
 ---
-
+ 
 const { caseStudy } = Astro.props
+const base = import.meta.env.BASE_URL
 
 ---
 
@@ -12,7 +13,7 @@ const { caseStudy } = Astro.props
     class:list={["relative isolate flex h-full w-full gap-6 overflow-hidden rounded-xl pt-[20rem] @md:pt-[28rem] @xl:justify-end @4xl:pt-0", caseStudy.bg]}>
 
     <img
-      src={ caseStudy.image }
+      src={ base + caseStudy.image }
       alt={ caseStudy.image_alt }
       class="drop-shadow-[0_100px_100px_rgba(0,0,0,0.5)] absolute top-[4cqb] left-8 mx-auto w-[90cqi] rounded-xl  @4xl:w-[60cqi] group-hover:scale-105 transition-transform duration-3000 ease-bs-spring transform-gpu"
       loading="lazy"

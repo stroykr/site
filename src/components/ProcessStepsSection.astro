@@ -1,0 +1,31 @@
+---
+const { title, steps } = Astro.props
+---
+
+<section class="bs-container bs-mt-lg" id="process">
+
+  { title && <h2 class="bs-h2 text-center">{ title }</h2> }
+
+  <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    { steps.map((item) =>
+
+    <article class="bg-bs-surface-0/90 p-6 rounded-xl flex gap-4">
+
+      <!-- Step number -->
+      <div class="shrink-0 h-12 w-12 rounded-full bg-bs-foreground-light/10 flex items-center justify-center text-2xl font-bold text-bs-foreground-light/40">
+        { item.step }
+      </div>
+
+      <!-- Content -->
+      <div>
+        <h3 class="text-xl font-semibold mb-2">{ item.title }</h3>
+        <p class="text-sm text-bs-foreground-dark">{ item.description }</p>
+      </div>
+
+    </article>
+    )}
+
+  </div>
+
+</section>

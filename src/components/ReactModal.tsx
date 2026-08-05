@@ -47,7 +47,6 @@ export const ReactModalForm = ({ settings }: { settings: any }) => {
       console.error('Ошибка:', error);
       const message = error instanceof Error ? error.message : 'Unknown error';
       alert(`Ошибка: ${message}`);
-
       setIsLoading(false);
     }
   };

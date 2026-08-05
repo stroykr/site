@@ -1,32 +1,32 @@
 [
   {
-    "title": "Powering Growth.<br>Simplifying Success.",
-    "sector": "Web design",
-    "content": "<strong>Our custom web design solution helped Biotechlet Ltd elevate its digital presence with a clean, modern interface and intuitive user experience. </strong> <br><br>The redesigned site streamlined user journeys, improved accessibility, and strengthened brand credibility.",
-    "case_study_link": "https://www.spike.news",
-    "cta": "Visit spike.news",
-    "image": "/content-images/spike.news.avif",
-    "image_alt": "iPad showing spike.news website",
-    "bg": "bg-gradient-to-r from-indigo-500 to-purple-600"
+    "title": "Капитальный ремонт 3-комнатной квартиры",
+    "sector": "Капитальный ремонт",
+    "content": "<strong>Полный капитальный ремонт с перепланировкой в ЖК «Сердце Столицы».</strong> <br><br>Выполнены работы: демонтаж перегородок, возведение новых, стяжка пола, штукатурка стен, замена всей электрики и сантехники, чистовая отделка.",
+    "case_study_link": "/portfolio",
+    "cta": "Смотреть проект",
+    "image": "content-images/project-01.webp",
+    "image_alt": "Капитальный ремонт 3-комнатной квартиры 125 м²",
+    "bg": "bg-gradient-to-r from-stone-700 to-neutral-600"
   },
   {
-    "title": "Accelerating Innovation.<br>Empowering Results.",
-    "sector": "Development",
-    "content": "Our dynamic design and build simplified productivity, delivering automated solutions, seamless collaboration, and data-driven insights",
-    "case_study_link": "https://pixelate.pictures",
-    "cta": "Visit pixelate.pictures",
-    "image": "/content-images/pixelate.pictures.avif",
-    "image_alt": "iPad showing pixelated wave painting",
-    "bg": "bg-gradient-to-r from-fuchsia-500 to-cyan-500"
+    "title": "Косметический ремонт квартиры в новостройке",
+    "sector": "Косметический ремонт",
+    "content": "Обновление квартиры 85 м² в ЖК «Сколково». Покраска стен, укладка ламината, натяжные потолки, установка дверей и сантехники. Срок: 3 недели.",
+    "case_study_link": "/portfolio",
+    "cta": "Смотреть проект",
+    "image": "content-images/project-02.webp",
+    "image_alt": "Косметический ремонт квартиры 85 м² в новостройке",
+    "bg": "bg-gradient-to-r from-stone-600 to-zinc-500"
   },
   {
-    "title": "Enhance productivity,<br>boost efficiency.",
-    "sector": "3D Design",
-    "content": "Create, collaborate, and render — all in one streamlined workflow. Teams are connected and producing stunning visuals in minutes.",
-    "case_study_link": "https://www.brighton.dog",
-    "cta": "Visit brighton.dog",
-    "image": "/content-images/brighton.dog.avif",
-    "image_alt": "iPad showing the web page of brighton.dog",
-    "bg": "bg-gradient-to-r from-pink-500 to-yellow-500"
+    "title": "Ремонт загородного дома 830 м²",
+    "sector": "Премиальный ремонт",
+    "content": "Комплексный ремонт дома в КП «Монтевиль». Чистовая отделка, монтаж инженерных систем, установка камина, отделка террасы. Срок: 4 месяца.",
+    "case_study_link": "/portfolio",
+    "cta": "Смотреть проект",
+    "image": "content-images/project-03.webp",
+    "image_alt": "Ремонт загородного дома 830 м²",
+    "bg": "bg-gradient-to-r from-zinc-700 to-stone-500"
   }
 ]

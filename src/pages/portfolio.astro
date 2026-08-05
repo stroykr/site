@@ -1,0 +1,105 @@
+---
+ 
+import Layout from "../layouts/Layout.astro";
+import global_settings from "../data/global_settings.json";
+import portfolio from "../data/portfolio.json";
+
+const title = "Портфолио — Примеры выполненных работ";
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title={ title }>
+
+  <section class="bs-container py-16">
+
+    <!-- Header -->
+    <h1 class="bs-h1 text-center">Примеры выполненных работ</h1>
+    <p class="bs-body-text text-center mt-4 text-lg">
+      Более 100 успешно завершённых проектов в Москве и Московской области
+    </p>
+
+    <!-- Filter buttons -->
+    <div class="flex justify-center gap-4 mt-8 flex-wrap">
+      <button class="bs-btn !bg-bs-foreground-light/10" data-filter="all">Все проекты</button>
+      <button class="bs-btn" data-filter="kvartira">Квартиры</button>
+      <button class="bs-btn" data-filter="dom">Дома</button>
+      <button class="bs-btn" data-filter="kommerciya">Коммерция</button>
+    </div>
+
+    <!-- Portfolio grid -->
+    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+
+      { portfolio.map((item) =>
+
+      <article
+        class="bg-bs-surface-0/90 rounded-xl overflow-hidden flex flex-col hover:scale-[1.02] transition-transform duration-300"
+        data-category={ item.category }
+      >
+
+        <!-- Image -->
+        <figure class="aspect-[4/3] overflow-hidden">
+          <img
+            src={ base + item.image }
+            alt={ item.title }
+            loading="lazy"
+            class="w-full h-full object-cover"
+            height="600"
+            width="800"
+          />
+        </figure>
+
+        <!-- Content -->
+        <div class="p-6 flex flex-col gap-3 flex-1">
+
+          <h3 class="text-xl font-semibold">{ item.title }</h3>
+
+          <div class="flex gap-3 text-sm text-bs-foreground-dark">
+            <span>{ item.type }</span>
+            <span>•</span>
+            <span>{ item.area }</span>
+          </div>
+
+          <p class="text-sm text-bs-foreground-dark flex-1">{ item.description }</p>
+
+          <div class="flex justify-between items-center mt-2 pt-4 border-t border-bs-foreground-dark/10">
+            <span class="text-sm text-bs-foreground-dark">{ item.duration }</span>
+            <span class="text-lg font-bold">{ item.budget }</span>
+          </div>
+
+        </div>
+
+      </article>
+      )}
+
+    </div>
+
+  </section>
+
+</Layout>
+
+<script>
+  // Client-side filtering
+  document.querySelectorAll('[data-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      // Update active button
+      document.querySelectorAll('[data-filter]').forEach(b => {
+        b.classList.remove('!bg-bs-foreground-light/10');
+        if (b.dataset.filter !== filter) b.classList.add('!bg-transparent');
+      });
+      btn.classList.add('!bg-bs-foreground-light/10');
+      btn.classList.remove('!bg-transparent');
+
+      // Filter items
+      document.querySelectorAll('#portfolio-grid > article').forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

@@ -1,6 +1,7 @@
 ---
-
+ 
 const { title, clients } = Astro.props
+const base = import.meta.env.BASE_URL
 
 ---
 
@@ -19,7 +20,7 @@ const { title, clients } = Astro.props
         <a class="group py-10 px-5 rounded-xl flex place-content-center bg-bs-surface-2/70 hover:bg-bs-surface-2 transition-colors duration-300" href={ item.link }>
 
           <img
-            src={ item.image }
+            src={ base + item.image }
             alt={ item.title }
             class="opacity-60 max-w-32 min-h-16 group-hover:scale-[1.05] group-hover:-translate-y-1 group-hover:opacity-100 group-hover:-rotate-1 ease-bs-bounce transition-all duration-1000"
             width="140"

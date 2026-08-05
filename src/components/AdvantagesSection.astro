@@ -1,0 +1,23 @@
+---
+const { title, advantages } = Astro.props
+---
+
+<section class="bs-container bs-mt-lg" id="advantages">
+
+  { title && <h2 class="bs-h2 text-center">{ title }</h2> }
+
+  <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    { advantages.map((item) =>
+
+    <article class="bg-bs-surface-0/90 p-6 rounded-xl text-center">
+
+      <h3 class="text-xl font-semibold mb-3">{ item.title }</h3>
+      <p class="text-sm text-bs-foreground-dark">{ item.description }</p>
+
+    </article>
+    )}
+
+  </div>
+
+</section>

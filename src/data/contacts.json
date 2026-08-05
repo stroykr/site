@@ -1,0 +1,31 @@
+{
+  "phoneCall": "+7 (977) 717-52-52",
+  "phoneCity": "+7 (495) 9-724-724",
+  "phoneCallRaw": "79777175252",
+  "phoneCityRaw": "74959724724",
+  "workingHours": "Пн-Вс, 08:00–22:00",
+  "contactHours": "Пн-Вс, 08:00–23:00",
+  "contactMethods": [
+    {
+      "title": "Позвоните (мобильный)",
+      "description": "Ответим на все вопросы, рассчитаем стоимость и согласуем время замера",
+      "value": "+7 (977) 717-52-52",
+      "link": "tel:+79777175252",
+      "icon": "phone"
+    },
+    {
+      "title": "Позвоните (городской)",
+      "description": "Для звонков с городских номеров",
+      "value": "+7 (495) 9-724-724",
+      "link": "tel:+74959724724",
+      "icon": "phone"
+    },
+    {
+      "title": "Напишите в WhatsApp",
+      "description": "Быстро отвечаем в мессенджере, можно прислать фото или планировку",
+      "value": "WhatsApp",
+      "link": "https://api.whatsapp.com/send/?phone=79254823331",
+      "icon": "whatsapp"
+    }
+  ]
+}

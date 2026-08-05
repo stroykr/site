@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stroykomplektremont.ru/sitemap-index.xml

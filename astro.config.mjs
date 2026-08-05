@@ -6,6 +6,9 @@ import react from "@astrojs/react";
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
+  site: 'https://stroykr.github.io',
+  base: '/site-prod/',
+
   vite: {
     plugins: [tailwindcss(), svgr()]
   },

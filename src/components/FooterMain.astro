@@ -6,23 +6,28 @@ const { settings } = Astro.props
 
 ---
 
-<footer class="@container bs-container my-24 font-semibold text-bs-foreground-dark [&_a]:hover:text-bs-foreground-light [&_a]:transition-color [&_a]:duration-150" id="contact">
+<footer class="@container bs-container my-24 font-semibold text-bs-foreground-dark [&_a]:hover:text-bs-foreground-light [&_a]:transition-color [&_a]:duration-150">
 
   <!-- Wrapper -->
   <div class="bg-bs-surface-2 p-6 md:p-16 rounded-xl grid md:grid-cols-2 gap-8">
 
       <!-- Left col -->
-      <div class="w-max flex flex-col gap-8 md:gap-0 justify-between text-bs-foreground-light">
+      <div class="w-max flex flex-col gap-6 justify-between text-bs-foreground-light">
 
         <!-- Logo -->
         <a class="flex group" href="#top" aria-label="Back to top">
-
           <Logo class="group-hover:scale-90 transition-transform ease-bs-spring duration-1000" width="200" height="62"  />
-
         </a>
 
-        <!-- CTA title -->
-        <h2 class="bs-h3">{ settings.dialogModal.title  }</h2>
+        <!-- Phones -->
+        <div class="flex flex-col gap-1">
+          <a href="tel:+79777175252" class="text-xl font-bold">
+            { settings.variables.phoneCallFormatted }
+          </a>
+          <a href="tel:+74959724724" class="text-sm">
+            { settings.variables.phoneCityFormatted }
+          </a>
+        </div>
 
         <!-- CTA Button -->
         <button type="button" class="min-w-32 bs-btn block bg-bs-surface-3" onclick="demo.showModal()">
@@ -36,51 +41,31 @@ const { settings } = Astro.props
 
         <!-- Nav -->
         <nav class="flex flex-col">
-
-          { settings.nav.sort((a,b) => a.title.localeCompare(b.title)).map( item =>
-
-            <a href={ item.link }>
-              { item.title }
-            </a>
-
+          { settings.nav.sort((a, b) => a.title.localeCompare(b.title)).map(item =>
+            <a href={ item.link }>{ item.title }</a>
           )}
-
+          <a href="/portfolio">Портфолио</a>
         </nav>
 
         <!-- Social links -->
         <nav class="flex flex-col">
           { settings.social_links.map( item => {
-
             const link = item.link.replaceAll(/\{\{(\w+)\}\}/g, (match, varName) => {
-              return settings.variables[varName] || match; // Если переменной нет, оставляем оригинальный текст
+              return settings.variables[varName] || match;
             });
-
-           return <a href={ link }>
-              { item.title }
-            </a>
-
+           return <a href={ link } target="_blank" rel="noopener noreferrer">{ item.title }</a>
          } )}
-
         </nav>
 
       </div>
 
   </div>
 
-
   <!-- Colophon -->
   <aside class="bs-container">
-
       <nav class="flex gap-4 justify-center pt-16 md:pt-24 text-xs">
-
         Copyright 2025 © СтройКомплектРемонт
-
-        <!-- Credits -->
-        <a href="/credits">about / credits</a>
-
       </nav>
-
   </aside>
 
 </footer>
-

@@ -1,0 +1,18 @@
+---
+const { title, content } = Astro.props
+---
+
+<section class="bs-container bs-mt-lg text-center">
+
+  <div class="bg-bs-surface-0/90 p-12 md:p-16 rounded-xl">
+
+    { title && <h2 class="bs-h2">{ title }</h2> }
+    { content && <p class="bs-body-text mt-4 text-lg">{ content }</p> }
+
+    <button type="button" class="bs-btn mt-6 text-lg px-8 py-4" onclick="demo.showModal()">
+      Оставить заявку
+    </button>
+
+  </div>
+
+</section>

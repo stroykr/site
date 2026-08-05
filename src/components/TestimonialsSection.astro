@@ -1,34 +1,33 @@
 ---
-
 const { title, testimonials } = Astro.props
-
 ---
 
-<section class="bs-container bs-mt-lg">
+<section class="bs-container bs-mt-lg" id="feedback">
 
-  <!-- Title -->
-  { title && <h2 class="bs-h2 text-center md:text-left">{ title }</h2>}
+  { title && <h2 class="bs-h2 text-center">{ title }</h2> }
 
-  <!-- Testimonials -->
-  <div class="group bs-mt-md grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 place-content-center gap-4">
+  <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    <!-- Quote -->
-    { testimonials.map( item =>
+    { testimonials.map((item) =>
 
-      <blockquote
-        class:list={["group-hover:opacity-75 hover:opacity-100 duration-300 p-3 md:p-5 flex flex-col gap-3 justify-between border rounded-md bg-bs-surface-2 border-bs-surface-3 transition-all grid-flow-dense", item.quote.length > 100 ? "lg:col-span-2" : ""]}>
+    <blockquote class="bg-bs-surface-0/90 p-6 rounded-xl flex flex-col gap-4">
 
-        <!-- Text -->
-        <p set:html={ item.quote } class:list={["text-sm lg:text-lg", item.quote.length > 100 ? "line-clamp-4 lg:line-clamp-none" : ""]} />
+      <p class="bs-body-text text-sm italic leading-relaxed">«{ item.quote }»</p>
 
-        <!-- Cite -->
-        <cite class="not-italic text-bs-foreground-dark text-sm font-semibold">@{ item.handle }</cite>
+      <footer class="mt-auto pt-4 border-t border-bs-foreground-dark/10">
+        <cite class="font-semibold not-italic">{ item.handle }</cite>
+      </footer>
 
-      </blockquote>
-
+    </blockquote>
     )}
 
   </div>
 
-</section>
+  <!-- CTA after testimonials -->
+  <div class="text-center mt-8">
+    <button type="button" class="bs-btn" onclick="demo.showModal()">
+      Хочу так же — заказать ремонт
+    </button>
+  </div>
 
+</section>
