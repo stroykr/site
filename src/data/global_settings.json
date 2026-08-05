@@ -1,57 +1,64 @@
 {
+  "variables": {
+    "phone": "79296515131",
+    "requestUrl": "https://script.google.com/macros/s/AKfycbzVzZRqcc1oRrJjAfCVOgkTLgdBlzR77ltA0mnOurZp6_gWULAOw1HlHqAAsuoTaY_wmw/exec"
+  },
   "title": "blackspike astro landing page",
   "description": "A free Astro landing theme made with Tailwind",
   "social_image": "/1200x630.jpg",
   "base_url": "https://astro-theme.blackspike.com",
-  "demo": {
-    "title": "Need design?",
-    "content": "<strong>Get a guided tour through our services</strong>, and find out how you and your team can change the way you work, forever.",
-    "cta": "Book a call"
+  "dialogModal": {
+    "title": "Нужен ремонт?",
+    "content": "Оставьте заявку, и мы перезвоним вам в ближайшее время",
+    "cta": "Заказать звонок",
+    "loading": "Отправка...",
+    "success": "Успешно! Ожидайте звонка"
   },
   "theme_color": "#18181b",
   "nav": [
     {
-      "title": "Services",
+      "title": "Услуги",
+      "order": 1,
       "link": "/#services"
     },
     {
-      "title": "Case studies",
-      "link": "/#case-studies"
+      "title": "Примеры работ",
+      "order": 2,
+      "link": "/#projects"
     },
     {
-      "title": "Pricing",
-      "link": "/#pricing"
-    },
-    {
-      "title": "FAQ",
+      "title": "Ответы на вопросы",
+      "order": 3,
       "link": "/#faq"
     },
     {
-      "title": "Newsletter",
-      "link": "/#newsletter"
+      "title": "О нас",
+      "order": 4,
+      "link": "/#about"
+    },
+    {
+      "title": "Контакты",
+      "order": 5,
+      "link": "/#contacts"
     }
   ],
 
   "social_links": [
     {
-      "title": "Twitter / X",
-      "link": "https://x.com/blackspikeltd/"
+      "title": "WhatsApp",
+      "link": "https://api.whatsapp.com/send/?phone={{phone}}&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%83+%D0%BC%D0%B5%D0%BD%D1%8F+%D0%B5%D1%81%D1%82%D1%8C+%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81"
     },
     {
-      "title": "Mastodon",
-      "link": "https://mastodon.cloud/@blackspike"
+      "title": "VK",
+      "link": "https://vk.com/stroykomplektremont"
     },
     {
-      "title": "GitHub",
-      "link": "https://github.com/blackspike/"
+      "title": "Youtube",
+      "link": "https://www.youtube.com/channel/UCpD16jm-_COi6pCeA4dpB0g"
     },
     {
-      "title": "LinkedIn",
-      "link": "https://www.linkedin.com/company/blackspike"
-    },
-    {
-      "title": "Bluesky",
-      "link": "https://bsky.app/profile/blackspike.com/"
+      "title": "Instagram",
+      "link": "https://instagram.com/stroykomplektremont.ru?igshid=YmMyMTA2M2Y="
     }
   ]
 }

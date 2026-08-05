@@ -1,6 +1,6 @@
 ---
 
-import Arrow from '../assets/theme-images/icon-arrow.svg'
+import Arrow from '../assets/theme-images/icon-arrow.svg';
 
 const { question, answer } = Astro.props
 
@@ -17,7 +17,7 @@ class="group bg-bs-surface-2 hover:bg-bs-surface-3 open:bg-bs-surface-3 transiti
 
     <!-- Icon -->
     <span>
-      <Arrow class="opacity-60 h-4 w-4 transition -rotate-90 group-open:rotate-90 ease-bs-bounce duration-1000" height="16" width="25" />
+      <Arrow class="opacity-60 h-4 w-4 transition -rotate-90 group-open:rotate-90 ease-in-out duration-300" height="16" width="25" />
     </span>
   </summary>
 
@@ -47,7 +47,7 @@ details {
     block-size: 0;
     opacity: 0;
     overflow-y: clip;
-    transition: content-visibility 1s allow-discrete, opacity 1s, block-size 1s var(--ease-bs-bounce);
+    transition: content-visibility 500ms allow-discrete, opacity 1s, block-size 500ms var(--ease-in-out);
   }
 
   &[open]::details-content {

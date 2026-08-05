@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Containers */
 .bs-container {
@@ -8,13 +8,30 @@
 
 /* Top Margins */
 .bs-mt-lg {
-  @apply mt-16 lg:mt-32
+  @apply mt-16 lg:mt-32;
 }
 
 .bs-mt-md {
-  @apply mt-10 lg:mt-16
+  @apply mt-10 lg:mt-16;
 }
 
 .bs-mt-sm {
-  @apply mt-6 lg:mt-8
+  @apply mt-6 lg:mt-8;
+}
+
+.spinner {
+  display: inline-block;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: currentColor;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

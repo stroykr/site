@@ -10,9 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
-    "astro": "^5.11.0",
-    "swiper": "^11.2.10",
-    "tailwindcss": "^4.1.11"
+    "@astrojs/react": "^6.0.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "astro": "^7.1.6",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "sharp": "^0.35.3",
+    "swiper": "^14.0.7",
+    "tailwindcss": "^4.3.3",
+    "vite-plugin-svgr": "^5.2.0"
   }
 }

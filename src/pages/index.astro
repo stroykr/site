@@ -1,26 +1,24 @@
 ---
 
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 
-import CaseStudiesSection from "../components/CaseStudiesSection.astro"
-import ClientsSection from "../components/ClientsSection.astro"
-import FaqSection from "../components/FaqSection.astro"
-import ServicesCarousel from "../components/ServicesCarousel.astro"
-import HeroSection from "../components/HeroSection.astro"
-import NewsletterSection from "../components/NewsletterSection.astro"
-import PricingSection from "../components/PricingSection.astro"
-import QuoteSection from "../components/QuoteSection.astro"
-import TestimonialsSection from "../components/TestimonialsSection.astro"
+import CaseStudiesSection from "../components/CaseStudiesSection.astro";
+import ClientsSection from "../components/ClientsSection.astro";
+import FaqSection from "../components/FaqSection.astro";
+import HeroSection from "../components/HeroSection.astro";
+import PricingSection from "../components/PricingSection.astro";
+import QuoteSection from "../components/QuoteSection.astro";
+import ServicesCarousel from "../components/ServicesCarousel.astro";
+import TestimonialsSection from "../components/TestimonialsSection.astro";
 
-import caseStudies from "../data/case_studies.json"
-import clients from "../data/clients.json"
-import faq from "../data/faq.json"
-import services from "../data/services.json"
-import home from "../data/home.json"
-import pricing from "../data/pricing.json"
-import global_settings from "../data/global_settings.json"
-import newsletter from "../data/newsletter.json"
-import testimonials from "../data/testimonials.json"
+import caseStudies from "../data/case_studies.json";
+import clients from "../data/clients.json";
+import faq from "../data/faq.json";
+import global_settings from "../data/global_settings.json";
+import home from "../data/home.json";
+import pricing from "../data/pricing.json";
+import services from "../data/services.json";
+import testimonials from "../data/testimonials.json";
 
 ---
 
@@ -69,6 +67,6 @@ import testimonials from "../data/testimonials.json"
     title={ home.faq_title }
   />
 
-  <NewsletterSection newsletter={newsletter} />
+  <!-- <NewsletterSection newsletter={newsletter} /> -->
 
 </Layout>

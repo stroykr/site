@@ -16,19 +16,85 @@ Now available as an official Astro theme! [Download it from the Astro themes pag
 
 We hope you find it useful!
 
+## Быстрый старт
+
+### Требования
+
+- [Node.js](https://nodejs.org/) версии 18 или выше
+- [pnpm](https://pnpm.io/) (рекомендуется) или npm
+
+### Установка и запуск
+
+```bash
+# Клонировать репозиторий
+git clone <repo-url> blackspike-landing
+cd blackspike-landing
+
+# Установить зависимости
+pnpm install
+
+# Запустить сервер разработки
+pnpm dev
+```
+
+Сервер разработки запустится по адресу [http://localhost:4321](http://localhost:4321).
+
+### Команды
+
+| Команда          | Действие                                                   |
+| :--------------- | :--------------------------------------------------------- |
+| `pnpm install`   | Установка зависимостей                                     |
+| `pnpm dev`       | Запуск сервера разработки на `localhost:4321`              |
+| `pnpm start`     | Запуск сервера разработки (без `--host`)                   |
+| `pnpm build`     | Сборка production-версии в папку `./dist/`                 |
+| `pnpm preview`   | Предпросмотр собранного сайта перед деплоем                |
+| `pnpm astro ...` | Запуск CLI-команд Astro (`astro add`, `astro check` и др.) |
+
+### Структура проекта
+
+```
+├── public/              # Статические файлы (изображения, фавиконки, манифест)
+├── src/
+│   ├── assets/
+│   │   ├── css/         # Глобальные стили (Tailwind, базовые стили, кнопки, типографика)
+│   │   ├── fonts/       # Локальные шрифты (Inter, Inter Display) в формате woff2
+│   │   └── theme-images/# Изображения темы и иконки
+│   ├── components/      # Astro и React компоненты
+│   ├── data/            # JSON-файлы с контентом (настройки, услуги, FAQ, клиенты и др.)
+│   ├── layouts/         # Макеты страниц (Layout.astro)
+│   └── pages/           # Страницы сайта
+├── astro.config.mjs     # Конфигурация Astro
+├── tsconfig.json        # TypeScript конфигурация
+└── package.json         # Зависимости и скрипты
+```
+
+### Редактирование контента
+
+Контент сайта хранится в JSON-файлах в папке `src/data/`:
+
+- [`global_settings.json`](src/data/global_settings.json) — общие настройки сайта (заголовок, описание, соцсети)
+- [`home.json`](src/data/home.json) — контент главной страницы
+- [`services.json`](src/data/services.json) — список услуг
+- [`pricing.json`](src/data/pricing.json) — тарифы
+- [`faq.json`](src/data/faq.json) — часто задаваемые вопросы
+- [`testimonials.json`](src/data/testimonials.json) — отзывы
+- [`case_studies.json`](src/data/case_studies.json) — кейсы
+- [`clients.json`](src/data/clients.json) — логотипы клиентов
+- [`newsletter.json`](src/data/newsletter.json) — настройки рассылки
+
 ## License
 
 Theme and 3D images are licensed under a [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/).
 
 Created by blackspike [blackspike design](https://www.blackspike.com) – a web design & development team specialising in Astro, Vue, Nuxt & Wordpress websites
 
-## Astro 5 Features
+## Astro 7 Features
 
 - [Image component](https://docs.astro.build/en/guides/images/#display-optimized-images-with-the-image--component) for optimised AVIF images
 - All-[JSX](https://docs.astro.build/en/reference/astro-syntax/) native astro components
 - SVGs imported as [SVG components](https://docs.astro.build/en/guides/images/#svg-components)
 - JSON-powered content (easy to edit UI text or hook up a CMS!)
-- Experimental [Fonts API](https://docs.astro.build/en/reference/experimental-flags/fonts/)
+- Local fonts via `@font-face`
 
 ## CSS & HTML Features
 
@@ -68,16 +134,13 @@ Created by blackspike [blackspike design](https://www.blackspike.com) – a web 
 
 #tailwind #tailwind4 #astro #landingPage #css #html #swiper #dark #theme
 
-## Commands
+## Команды
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `pnpm install`         | Installs dependencies                            |
+| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm build`           | Build your production site to `./dist/`          |
+| `pnpm preview`         | Preview your build locally, before deploying     |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm astro -- --help` | Get help using the Astro CLI                     |

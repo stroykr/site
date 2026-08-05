@@ -16,20 +16,21 @@ const { settings, title, content } = Astro.props
     <h1 class="bs-h1" set:html={ title } />
 
     <!-- Content -->
-    <div class="bs-body-text xl:text-xl flex flex-col gap-4 [&_p]:last:text-bs-foreground-dark" set:html={ content } />
+    <!-- <div class="bs-body-text xl:text-xl flex flex-col gap-4 [&_p]:last:text-bs-foreground-dark" set:html={ content } /> -->
+    <div class="bs-body-text xl:text-xl flex flex-col gap-4" set:html={ content } />
 
     <!-- CTA -->
     <button type="button" class="bs-btn self-start bs-mt-sm" onclick="demo.showModal()">
-      { settings.demo.cta }
+      { settings.dialogModal.cta }
     </button>
 
   </div>
 
   <!-- Image -->
-  <figure class="flex place-content-center -mt-20 lg:mt-0">
+  <!-- <figure class="flex place-content-center -mt-20 lg:mt-0">
 
     <Image src={ hero_screens } format="avif" quality="high" alt="Screens showing phone, tablet and desktop views of our website" loading="eager" />
 
-  </figure>
+  </figure> -->
 
 </section>

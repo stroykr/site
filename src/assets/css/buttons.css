@@ -1,10 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @reference "./global.css";
 
 .bs-btn {
-
-  @apply
-    active:translate-y-[1px]
+  @apply active:translate-y-[1px]
     active:bg-bs-surface-2
     bg-bs-surface-3
     duration-200
@@ -33,5 +31,9 @@
     hover:before:translate-x-0
     hover:before:opacity-10
     active:before:opacity-0
-    ;
+    cursor-pointer
+    disabled:opacity-70
+    disabled:cursor-not-allowed
+    disabled:before:hidden
+    disabled:active:translate-y-0;
 }
