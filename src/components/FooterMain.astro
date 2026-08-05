@@ -1,8 +1,9 @@
 ---
-
+ 
 import Logo from '../assets/theme-images/logo.svg'
 
 const { settings } = Astro.props
+const base = import.meta.env.BASE_URL
 
 ---
 
@@ -42,9 +43,9 @@ const { settings } = Astro.props
         <!-- Nav -->
         <nav class="flex flex-col">
           { settings.nav.sort((a, b) => a.title.localeCompare(b.title)).map(item =>
-            <a href={ item.link }>{ item.title }</a>
+            <a href={ base + item.link.replace(/^\//, '') }>{ item.title }</a>
           )}
-          <a href="/portfolio">Портфолио</a>
+          <a href={base + 'portfolio'}>Портфолио</a>
         </nav>
 
         <!-- Social links -->

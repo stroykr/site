@@ -39,7 +39,7 @@ const base = import.meta.env.BASE_URL
       <div class="bs-body-text flex-grow text-balance" set:html={ caseStudy.content } />
 
       <!-- CTA -->
-      <a href={ caseStudy.case_study_link } class="bs-btn inline-block self-start @4xl:mt-12">
+      <a href={ base + caseStudy.case_study_link.replace(/^\//, '') } class="bs-btn inline-block self-start @4xl:mt-12">
         { caseStudy.cta }
       </a>
 
